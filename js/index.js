@@ -48,5 +48,9 @@ function playVideoOnScroll(){
     }, 10)
 }
 
-inicializarSlider();
-playVideoOnScroll();
+//inicializarSlider();
+//playVideoOnScroll();
+$(document).ready(function() {
+  $('select').material_select();
+  $(".js-range-slider").ionRangeSlider();
+});

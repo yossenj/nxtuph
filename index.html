@@ -20,7 +20,7 @@
       <h1>Buscador</h1>
     </div>
     <div class="colFiltros">
-      <form action="buscador.php" method="post" id="formulario">
+      <form action="javascript:;" onsubmit="return filtros()" method="post" id="formulario">
         <div class="filtrosContenido">
           <div class="tituloFiltros">
             <h5>Realiza una búsqueda personalizada</h5>
@@ -39,7 +39,7 @@
           </div>
           <div class="filtroPrecio">
             <label for="rangoPrecio">Precio:</label>
-            <input type="text" id="rangoPrecio" name="precio" value="" />
+            <input type="text" id="rangoPrecio" class="js-range-slider" data-type="double" data-min="1000" data-max="50000" data-from="200" data-to="500" data-grid="false" name="precio" value="" />
           </div>
           <div class="botonField">
             <input type="submit" class="btn white" value="Buscar" id="submitButton">
@@ -52,13 +52,14 @@
       <div class="tituloContenido card">
         <h5>Resultados de la búsqueda:</h5>
         <div class="divider"></div>
-        <button type="button" name="todos" class="btn-flat waves-effect" id="mostrarTodos">Mostrar Todos</button>
+        <button type="button" name="todos" class="btn-flat waves-effect" id="mostrarTodos" onclick="mostrartodos()">Mostrar Todos</button>
       </div>
-
     </div>
   </div>
 
   <script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+  <script type="text/javascript" src="js/es6.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
