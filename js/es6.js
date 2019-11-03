@@ -9,8 +9,8 @@ class tools {
 		var selecttipo=$('#selectTipo'), tipos = []
 		this.ajaxr('data-1.json', "GET", function(data){
 			//var select = $(selectcity), selecttipo=$(selecttipo)
-			selectcity.html('<option value="" selected>Elige una ciudad</option>')
-			selecttipo.html('<option value="" selected>Elige un tipo</option>')
+			selectcity.html('<option value="1" selected>Elige una ciudad</option>')
+			selecttipo.html('<option value="1" selected>Elige un tipo</option>')
 			$.each(data, function(index,value){
 				var city= value.Ciudad
 				if(typeof(cities[city])=="undefined")

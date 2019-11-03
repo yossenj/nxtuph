@@ -2,6 +2,9 @@ var utils = new tools('');
 utils.init()
 function mostrartodos()
 {
+	$('#selectCiudad').val('1')
+	$('#selectTipo').val('1')
+	$('#rangoPrecio').val('1000;50000')
 	utils.ajaxr("data-1.json", "GET", function(data){
 		printInList(data)
 	})
